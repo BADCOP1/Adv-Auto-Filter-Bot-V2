@@ -95,7 +95,8 @@ async def start(bot, update):
         InlineKeyboardButton('📲GROUP👨🏻‍💻', url='https://t.me/joinchat/q8li6l90_KVlYjE1')
     ]'[   
         InlineKeyboardButton('🤕HELP ME🚑', url='https://t.me/Zee_keralambot')
-        
+    ]]
+    
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await bot.send_photo(
