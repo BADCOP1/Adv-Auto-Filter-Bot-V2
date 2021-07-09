@@ -98,14 +98,12 @@ async def start(bot, update):
         
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
+    await bot.send_photo(
+                chat_id = update.chat.id,
+                photo= "https://telegra.ph/file/b18e228ed4a1717d31377.jpg",
+                caption=f"<b>എന്റെ പ്രാർത്ഥനങ്ങൾ അഡ്മിന്റെ വാക്കുകൾക്കാണ്</b>\n\n<b>എന്റെ അഡ്മിന്റെ അവകാശമില്ലാതെ എന്നെ ഉപയോഗിക്കാൻ പറ്റില്ല</b>",
+    reply_markup=reply_markup,        reply_to_message_id=update.message_id
+            )
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
